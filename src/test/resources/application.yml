@@ -1,0 +1,4 @@
+logging:
+  pattern:
+    level: "%X{trackId} %X{trackProperty} %X{custom} %5p"
+
