@@ -16,7 +16,7 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
 
-        <autumn-utils.version>0.0.1-SNAPSHOT</autumn-utils.version>
+        <autumn-bom.version>0.0.1-SNAPSHOT</autumn-bom.version>
         <spring-boot.version>2.0.6.RELEASE</spring-boot.version>
         <spring-cloud.version>Finchley.SR2</spring-cloud.version>
 
@@ -90,8 +90,10 @@
         <dependencies>
             <dependency>
                 <groupId>org.autumn</groupId>
-                <artifactId>autumn-utils</artifactId>
-                <version>${autumn-utils.version}</version>
+                <artifactId>autumn-bom</artifactId>
+                <version>${autumn-bom.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -200,4 +202,15 @@
             </testResource>
         </testResources>
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>rdm_releases</id>
+            <url>http://maven.oa.com/nexus/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>rdm_snapshots</id>
+            <url>http://maven.oa.com/nexus/content/repositories/thirdparty-snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
