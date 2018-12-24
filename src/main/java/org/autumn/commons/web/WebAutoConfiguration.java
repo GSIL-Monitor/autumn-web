@@ -5,7 +5,6 @@ import org.autumn.commons.web.exception.AutumnExceptionConfiguration;
 import org.autumn.commons.web.request.AutumnRequestConfiguration;
 import org.autumn.commons.web.response.AutumnResponseConfiguration;
 import org.autumn.commons.web.validation.AutumnValidationConfiguration;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 /**
@@ -16,7 +15,6 @@ import org.springframework.context.annotation.Import;
  * Version : 0.0.1 <br>
  * Date : 2018-12-13<br>
  */
-@Configuration
 @Import({
         AutumnBindConfiguration.class,
         AutumnValidationConfiguration.class,
